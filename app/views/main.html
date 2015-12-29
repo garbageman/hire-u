@@ -2,9 +2,12 @@
   <div class="row">
     <div id="search-container" class="col-md-12 dev column-element">
       <h4>What are you looking for?</h4>
-      <input id="search-field" role="searchbar" placeholder="search for jobs here ... "></div>
+      <input id="search-field" role="searchbar" placeholder="search for jobs here ... ">
+      <button role="button">Search</button>
     </div>
+  </div>
 
+  <div class="row">
     <div id="nav-container" class="col-md-12 dev column-element">
       <ul id="nav-list">
         <li><a role="button" href="#/">Search</a></li>
@@ -13,4 +16,14 @@
       </ul>
     </div>
   </div>
+
+  <div class="row">
+    <div id="job-listings" class="col-md-12 column-element dev">
+      <div class="job" ng-repeat="job in jobs">
+        <h4 ng-bind="job.title"></h4>
+        <p ng-bind="job.text"></p>
+        <hr>
+      </div>
+    </div>
+  </div>  
 </div>
