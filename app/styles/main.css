@@ -4,23 +4,47 @@ body {
 .dev {
   background-color: #888888;
 }
-#search-container {
-  height: 100px;
+.left-column {
   position: absolute;
   top: 20px;
   left: 20px;
+}
+#search-container {
+  height: 75px;
   text-align: center;
 }
 #search-field {
   width: 90%;
   margin: 0 auto;
 }
+#nav-container {
+  height: 75px;
+}
+#nav-list {
+  list-style: none;
+  line-height: 75px;
+  margin: 0 auto;
+}
+#nav-list li {
+  display: inline-block;
+  padding-right: 30px;
+  font-size: 24px;
+}
+#nav-list li a:hover {
+  text-decoration: none;
+}
+.column-element {
+  margin: 10px;
+}
 /* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
+  position: absolute;
+  bottom: 0;
   text-align: center;
+  padding: 20px;
 }
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {

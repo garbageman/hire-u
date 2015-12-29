@@ -9,3 +9,6 @@
 * SQL ??
 * Bootstrap
 * Grunt & Bower for dependencies
+
+## Wireframe (concept)
+https://wireframe.cc/WrKvBv
