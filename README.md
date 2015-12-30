@@ -19,9 +19,9 @@ https://wireframe.cc/WrKvBv
 user that under another name?
 
 ## TODO
-# If you plan on doing a task, initial it and then when it is done add the date that it was finished
-# Feel free to add anything to this list if you think it's important
-# These tasks are in no particular order
+### If you plan on doing a task, initial it and then when it is done add the date that it was finished
+### Feel free to add anything to this list if you think it's important
+### These tasks are in no particular order
 * Add installation/setup directions for people new to the project
 * Add directions for development on different parts of the project. Hopefully we have a realtime HTML/CSS development framework set up for people that want to work on the front end.
 * Create a model front end page that will be the template for all of the front end development. (Have a controller and services script coupled with some HTML)
