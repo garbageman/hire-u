@@ -23,7 +23,7 @@ user that under another name?
 ### Feel free to add anything to this list if you think it's important
 ### These tasks are in no particular order
 * Add installation/setup directions for people new to the project
-* Add a git best practices (or at least enough practices to not have problems)
+* Add a git best practices (or at least enough practices to not have problems) DN 12/30/15
 * Add directions for development on different parts of the project. Hopefully we have a realtime HTML/CSS development framework set up for people that want to work on the front end.
 * Create a model front end page that will be the template for all of the front end development. (Have a controller and services script coupled with some HTML)
 * Create a model JDBC/Spring REST endpoint so that it can be used as a template for the rest of development
