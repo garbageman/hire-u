@@ -26,43 +26,58 @@ When you are confident that your work is done, you will merge your branch with t
 Generally with commit messages, you will tag what task you were working on and add a snippet about what has changed.
 
 Example situation:
+
 You have been asked to add a page to the website. This page is for displaying information about departments in the site.
 You are working on the front end of this part of the application and your friend is working on the back end services.
 
 First create a new branch by using this command:
-git branch [branch name]
+
+### git branch [branch name]
+
 so in this case it will be:
-git branch department
+
+### git branch department
 
 You can verify what branch you are on by typing this command:
-git branch
+
+### git branch
 
 You will get a response that looks like this:
-department
-\* master
+
+### department
+
+### \* master
+
 This is a list of branches you have locally, and the asterisk is next to the branch you have currently checked out.
 
 You do not want to do work on the master branch, so in order to switch to the department branch you use this command:
-git checkout [branch name]
+
+### git checkout [branch name]
+
 in this case it will be:
-git checkout department
+
+### git checkout department
 
 You will see a confirmation message like:
-Switched to branch 'department'
+
+### Switched to branch 'department'
 
 Now that you have checked out the new branch, you can feel free to make changes and implement your task without worrying about how it will affect the master branch.
 
 It is important to keep your branch and the master branch up to date. You should occasionally pull into the master branch by saying:
-git pull master origin
+
+### git pull master origin
 
 It should be safe to pull from origin into master since you should never have merge conflicts.
 This is because you will always be working on a separate branch and there will be no changes to your master branch until you decide you want to push your changes.
 
 If it turns out that the master branch has been updated, you must merge it into the branch you are working on. This means you must switch branches to the one that you are working on and use this command:
 
-git merge [branch name]
+### git merge [branch name]
+
 in this case it will be:
-git merge master
+
+### git merge master
 
 Using git merge [branch name] on a branch will merge the named branch into the branch that you currently have checked out.
 
@@ -75,17 +90,28 @@ If those fail, then that means that something broke during the merge and you hav
 Now if you have finished working on your branch, master is up to date and has been successfully merged into your branch, you are passing all of the tests and it appears that everything is functioning properly, it is time for you to merge your code into the master branch, commit it and then push it to the origin.
 
 First you will check out the master branch by using:
-git checkout master
+
+### git checkout master
+
 Then you will merge your branch into the master by using:
-git merge [branch name]
+
+### git merge [branch name]
+
 Then you will add your changes to the git index, so it will know that things have changed. The really lazy way to do this is simply:
-git add .
+
+### git add .
+
 This adds the current directory to the git index and it will notice the changes that happened to the current directory.
+
 Now you will commit the new code by using:
-git commit -m "[Your message here]"
+
+### git commit -m "[Your message here]"
+
 Surround a brief description of the commit with quotes to add a message to your commit.
+
 Finally, you will push the new version of master to origin.
-git push origin master
+
+### git push origin master
 
 And you're done! You have implemented your own piece of the project and successfully pushed it to our repo.
 
