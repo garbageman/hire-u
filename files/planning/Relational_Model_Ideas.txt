@@ -2,15 +2,47 @@ Relational Model Planning
 
 Things we need to keep track of/save:
 Job Reviews
+Jobs
 Departments
 Users (Employers and Job Seekers)
 Job Postings
 
 How do we represent each of the entities?
 Job Reviews:
+Username
+Overall rating - Out of 5
 Job Type / Department
 Your major
 How good is it for career placement for that major
 Time Commitment/Flexibility
 Downtime
 Short Review (Covers work environment/perks/location How many characters?)
+We should save the time of each review so you can see the trends in what
+the working conditions are like. Also so you can filter to see the most recent
+reviews.
+
+Jobs/Job Postings:
+Department/Company Name
+University
+Office
+Job Title
+Job Description
+Is the department hiring for this position currently?
+
+Departments/Companies:
+University
+Department Name/Company Name
+Location
+
+Student User
+Username
+First Name
+Last Name
+Major
+Class Standing
+Should we make it possible for recruiters to come look over the student users on the site?
+
+Employer User
+Department/Company Name
+University
+Office
