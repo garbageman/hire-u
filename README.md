@@ -18,11 +18,6 @@ https://wireframe.cc/WrKvBv
 * - We can do research in automated account removal. How can we distinguish unique users? How do we know if a user is not just another
 user that under another name?
 
-## First meeting:
-* How do we set this up on a computer that just started working on the site?
-* Create a guide for different parts of development (frontend, backend, QA)
-* Create first task for us to do (probably end to end of one page)
-
 ## TODO
 ### If you plan on doing a task, initial it and then when it is done add the date that it was finished
 ### Feel free to add anything to this list if you think it's important
