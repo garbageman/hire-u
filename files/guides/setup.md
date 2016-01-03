@@ -1,3 +1,10 @@
+# Cloning the git repository
+In the directory that you want to keep these files, run this command:
+
+### git clone https://github.com/garbageman/hire-u
+
+This will create a file hire-u that will contain all of the files in the repository
+
 # Running the site
 
 If you have not yet set up the site by following the set up directions below, skip this part and read those directions first.
