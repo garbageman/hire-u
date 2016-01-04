@@ -146,16 +146,45 @@ public class PostGresSetup {
   public static void main(String[] argv) {
         System.out.println("Setting up the HireU database");
 
-        /* Initial test table setup */
-        HashMap<String,String> testAttributes = new HashMap<String,String>();
-        testAttributes.put("campus", "varchar(255)");
-        testAttributes.put("name", "varchar(255)");
-        testAttributes.put("location", "varchar(255)");
+        try (BufferedReader br = new BufferedReader(new FileReader(new File("/CMSC/HireU/webapp/setup/files/csvinfo.csv")))) {
 
-        createTable("department",testAttributes);
+            boolean done = false;
+            while (true) {
+              String relation = br.readLine();
+              String attr = br.readLine();
+              String types = br.readLine();
+              String path = br.readLine();
 
-        /* Fill the table from file */
-        fillTable("/CMSC/HireU/webapp/setup/files/departments.csv", "department");
+              if (relation == null || attr == null ||
+                    types == null || path == null) {
+                break;
+              }
+
+              /* Initial test table setup */
+              HashMap<String,String> attributes = new HashMap<String,String>();
+
+              String[] attrArray = attr.split(", ");
+              String[] typeArray = types.split(", ");
+
+              for (int i = 0; i < attrArray.length; i++) {
+                attributes.put(attrArray[i], typeArray[i]);
+              }
+
+              createTable(relation,attributes);
+
+              /* Fill the table from file */
+              fillTable(path, relation);
+            }
+
+        } catch (FileNotFoundException f) {
+    			System.out.println("CSV file was not found please specify a correct path");
+
+    			return;
+    		} catch (IOException i) {
+    			System.out.println("Error reading from the csv file");
+
+    			return;
+    		}
 
   }
 

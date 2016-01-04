@@ -1,0 +1,4 @@
+department
+campus, name, location
+varchar(255), varchar(255), varchar(255)
+/CMSC/HireU/webapp/setup/files/departments.csv
