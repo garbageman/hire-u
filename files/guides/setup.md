@@ -86,7 +86,7 @@ This will actually start the webapp and you will be able to see what the site lo
 
 ## Back end set up
 
-The local database that is used is Postgres. Install Postgres on your machine before continuing.
+The local database that is used is Postgres. Install Postgres on your machine before continuing. Setting up the database and populating it has been fully automated but it would be a good idea to look at the source code to see how it is done.
 
 Start up postgres and enter the command line interface. This can usually be done with this command:
 
@@ -112,10 +112,10 @@ Then finally grant permissions to hireu on the hireu database with this command:
 
 ### grant all privileges on database hireu to hireu
 
-Now that this is set up, navigate to setup/files. There is a bash script (setup.sh) that can be run on a unix system that will connect to the database and setup the tables.
+Now that this is set up, navigate to setup. There is a bash script (setup.sh) that can be run on a unix system that will connect to the database and setup the tables.
 To run the script just type:
 
-### setup.sh
+### ./setup.sh
 
 If the permission is denied, just run:
 

@@ -1,4 +1,14 @@
-# hire-u
+# Welcome to HireU!
+
+## A quick tour
+
+You can find guides on how to set up the site locally and good practices in files/guides.
+
+I plan on keeping track of our goals/plans in the files/planning.
+
+In order to set up the postgres server you will be using locally, I have created a setup folder that will contain all the programs needed to set up tables and populate them for you dev environment. This should all be automated through the setup bash file or batch file (depending on your OS).
+
+That's it for now! I hope you enjoy the site :D
 
 ## Stack
 * HTML5 Boilerplate
