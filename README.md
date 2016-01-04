@@ -6,7 +6,7 @@
 * Javascript
 * AngularJS
 * Spring
-* SQL ??
+* Postgres
 * Bootstrap
 * Grunt & Bower for dependencies
 

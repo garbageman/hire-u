@@ -1,13 +1,26 @@
 body {
-  padding: 20px;
+  background-color: #FFFFCC;
 }
 .dev {
-  background-color: #888888;
+  background-color: #ffffff;
 }
-.left-column {
+.main-app {
+  background-color: #CC3333;
+  padding: 10px;
+  padding-bottom: 10px;
   position: absolute;
+  /*margin: 20px;*/
   top: 20px;
   left: 20px;
+  right: 20px;
+  /*width: 98%;*/
+}
+.left-column {
+  top: 20px;
+  left: 20px;
+}
+.right-column {
+  height: 500px;
 }
 #search-container {
   height: 75px;
@@ -47,13 +60,13 @@ body {
 /* Custom page footer */
 .footer {
   width: 100%;
-  padding-top: 19px;
+  padding-top: 10px;
   color: #777;
   border-top: 1px solid #e5e5e5;
   position: absolute;
   bottom: 0;
   text-align: center;
-  padding: 20px;
+  padding: 10px;
   font-size: 12px;
 }
 /* Responsive: Portrait tablets and up */
