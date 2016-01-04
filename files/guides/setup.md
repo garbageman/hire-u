@@ -86,4 +86,39 @@ This will actually start the webapp and you will be able to see what the site lo
 
 ## Back end set up
 
-TODO: Fill this out when we get the back end set up
+The local database that is used is Postgres. Install Postgres on your machine before continuing.
+
+Start up postgres and enter the command line interface. This can usually be done with this command:
+
+### psql -p 5432
+
+Make sure that psql is in your path before trying that command.
+
+Now that you are connected to the database it is time to set up the actual database on the local instance and user that the site will be using to connect.
+
+Start by creating a hireu database with this command:
+
+### create database hireu;
+
+Then create a user hireu with the following command:
+
+### create user hireu;
+
+Give hireu a password (we will simply use "dev" for now) with this command:
+
+### alter user hireu with password 'dev';
+
+Then finally grant permissions to hireu on the hireu database with this command:
+
+### grant all privileges on database hireu to hireu
+
+Now that this is set up, navigate to setup/files. There is a bash script (setup.sh) that can be run on a unix system that will connect to the database and setup the tables.
+To run the script just type:
+
+### setup.sh
+
+If the permission is denied, just run:
+
+### chmod u+x setup.sh
+
+This will compile and execute the java programs used to set up the tables in the database.
