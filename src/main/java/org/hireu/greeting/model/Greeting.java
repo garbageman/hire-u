@@ -1,4 +1,4 @@
-package services;
+package org.hireu.greeting.model;
 
 public class Greeting {
 
