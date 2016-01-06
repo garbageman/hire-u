@@ -31,15 +31,18 @@ user that under another name?
 
 ## TODO
 ### If you plan on doing a task, initial it and then when it is done add the date that it was finished
+### Tasks that have been completed should be moved to the bottom
 ### Feel free to add anything to this list if you think it's important
-### These tasks are in no particular order
-* Add installation/setup directions for people new to the project DN
-* Add a git best practices (or at least enough practices to not have problems) DN 12/30/15
-* Add directions for development on different parts of the project. DN
+
+* Work on web design, figure out what we want the site to look like
+* Decide on what the first part of the site we want to build is
+* Set up security for user authentication using Spring as well
+* Create a relational diagram or something to help figure out what we want the db to look like
 * Create a model front end page that will be the template for all of the front end development. (Have a controller and services script coupled with some HTML)
 * Create a model JDBC/Spring REST endpoint so that it can be used as a template for the rest of development DN
-* Create a relational diagram or something to help figure out what we want the db to look like
-* Set up Postgres so that we can start using it for test data and relations DN
+* Add directions for development on different parts of the project. DN
+* Add installation/setup directions for people new to the project DN 01/05/2016
+* Add a git best practices (or at least enough practices to not have problems) DN 12/30/15
+* Set up Postgres so that we can start using it for test data and relations DN 01/04/2016
 * Set up REST services (Using Spring) http://spring.io/projects DN 01/02/16
-* Set up security for user authentication using Spring as well
-* Look into JDBC to hook the REST services into Postgres
+* Look into JDBC to hook the REST services into Postgres DN 01/05/2016
