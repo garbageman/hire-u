@@ -1,16 +1,30 @@
 <div class="main-panel">
+			<h2 class="school-title">University of Maryland - College Park</h2>
 	<div class="container">
 		<div class="jumbotron">
 			<img src="images/umd.png"></div>
 		</div>
 
 		<div>
-			<h2>University of Maryland - College Park</h2>
-			<ul class="stats">
+			<!-- <ul class="stats">
 				<li>Stat 1</li>
 				<li>Stat 2</li>
 				<li>Stat 3</li>
-			</ul>
+			</ul> -->
+			<div class="table-responsive table-striped">
+				<table class="table">
+					<thead>
+						<th>Rank</th>
+						<th>Top Jobs</th>
+					</thead>
+					<tbody>
+						<tr ng-repeat="job in jobs">
+							<td ng-bind="job.rank"></td>
+							<td ng-bind="job.title"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
 		</div>
 		<p>The University of Maryland, College Park (often referred to as The University of Maryland, Maryland, UM, UMD, or UMCP) is a public research university[8] located in the city of College Park in Prince George's County, Maryland, approximately 4 miles (6.4 km) from the northeast border of Washington, D.C. Founded in 1856, the university is the flagship institution of the University System of Maryland. With a fall 2010 enrollment of more than 37,000 students, over 100 undergraduate majors, and 120 graduate programs, Maryland is the largest university in the state and the largest in the Washington Metropolitan Area.[6][9] It is a member of the Association of American Universities and competes athletically as a member of the Big Ten Conference.
 		</p>

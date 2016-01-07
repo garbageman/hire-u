@@ -1,6 +1,15 @@
 angular.module('hireuApp', [])
 .controller('SchoolCtrl', ['$scope', function($scope) {
-	$scope.greet = function() {
-		console.log('ur a bitch');
-	}
+	$scope.jobs = [
+		{
+			"rank": 1,
+			"title": "CEO of hireU"
+		}, {
+			"rank": 2,
+			"title": "Testudo Engineer"
+		}, {
+			"rank": 3,
+			"title": "Tier-One Tech Support"
+		}
+	]
 }]); 

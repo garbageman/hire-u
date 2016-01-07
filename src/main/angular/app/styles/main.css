@@ -1,5 +1,5 @@
 body {
-  background-color: #CC3333;
+  background-color: #EA3F3C;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -21,7 +21,7 @@ a:active {
   padding: 0px 10px 10px 10px;
 }
 .main-app {
-  background-color: #BABABA;
+  /*background-color: #BABABA;*/
   padding: 10px;
   padding-bottom: 10px;
   position: absolute;
@@ -60,7 +60,7 @@ a:active {
 #nav-list li {
   display: inline-block;
   padding-right: 100px;
-  font-size: 24px;
+  font-size: 1em;
 }
 #nav-list li a:hover {
   text-decoration: none;
