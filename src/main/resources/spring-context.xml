@@ -13,9 +13,9 @@
 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
        <property name="driverClassName" value="org.postgresql.Driver"/>
-       <property name="url" value="jdbc:postgresql://localhost:5432/damiennagle"/>
-       <property name="username" value="damiennagle"/>
-       <property name="password" value="damiennagle"/>
+       <property name="url" value="jdbc:postgresql://localhost:5432/hireu"/>
+       <property name="username" value="hireu"/>
+       <property name="password" value="dev"/>
    </bean>
 
 </beans>

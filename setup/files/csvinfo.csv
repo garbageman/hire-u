@@ -2,3 +2,7 @@ department
 campus, name, location
 varchar(255), varchar(255), varchar(255)
 /CMSC/HireU/webapp/setup/files/departments.csv
+campus
+university, city, state, url
+varchar(255), varchar(255), varchar(255), varchar(255)
+/CMSC/HireU/webapp/setup/files/campuses.csv
