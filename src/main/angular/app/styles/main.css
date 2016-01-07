@@ -1,11 +1,27 @@
 body {
-  background-color: #FFFFCC;
+  background-color: #CC3333;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+.container {
+  padding-bottom: 40px;
+}
+.wrapper {
+  min-height: 100%;
+  position: relative;
 }
 .dev {
   background-color: #ffffff;
 }
+a:active {
+  text-decoration: none;
+}
+.row {
+  padding: 0px 10px 10px 10px;
+}
 .main-app {
-  background-color: #CC3333;
+  background-color: #BABABA;
   padding: 10px;
   padding-bottom: 10px;
   position: absolute;
@@ -16,18 +32,19 @@ body {
   /*width: 98%;*/
 }
 .left-column {
-  top: 20px;
-  left: 20px;
+  /*top: 20px;*/
+  /*left: 20px;*/
 }
 .right-column {
   height: 500px;
 }
 #search-container {
   height: 75px;
+  width: 40%;
   text-align: center;
 }
 #search-field {
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
   padding-left: 5px;
 }
@@ -59,12 +76,15 @@ body {
 }
 /* Custom page footer */
 .footer {
+  background-color: #312A2A;
   width: 100%;
-  padding-top: 10px;
-  color: #777;
+  /*padding-top: 10px;*/
+  color: #ffffff;
   border-top: 1px solid #e5e5e5;
+  height: 40px;
   position: absolute;
   bottom: 0;
+  left: 0;
   text-align: center;
   padding: 10px;
   font-size: 12px;
@@ -74,4 +94,11 @@ body {
   .container {
     max-width: 730px;
   }
+}
+
+.job-image {
+  display: inline;
+}
+.job-description {
+  display: block;
 }

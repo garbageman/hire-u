@@ -3,7 +3,7 @@
     <div class="left-column col-md-8">
       <div class="row">
         <div id="search-container" class="col-md-12 dev column-element">
-          <h4>What are you looking for?</h4>
+          <h5>What are you looking for?</h5>
           <input id="search-field" role="searchbar" placeholder="search for jobs here ... ">
           <button role="button">Search</button>
         </div>
@@ -15,6 +15,7 @@
             <li><a role="button" href="#/">Search</a></li>
             <li><a role="button" href="#/">Compare</a></li>
             <li><a role="button" href="#/">Profile</a></li>
+            <li><a role="button" ui-sref="school-home">School Home (Click me)</a></li>
           </ul>
         </div>
       </div>
@@ -22,8 +23,9 @@
       <div class="row">
         <div id="job-listings" class="col-md-12 column-element dev">
           <div class="job" ng-repeat="job in jobs">
-            <h4 ng-bind="job.title"></h4>
-            <p ng-bind="job.text"></p>
+            <h4 class="job-title" ng-bind="job.title"></h4>
+            <p class="job-description" ng-bind="job.text"></p>
+            <img class="job-image" ng-src="{{job.image}}"></img>
             <hr>
           </div>
         </div>
