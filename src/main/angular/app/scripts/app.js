@@ -15,16 +15,41 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router',
+    'oc.lazyLoad'
+
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/");
+
+    $stateProvider
+      .state('main', {
+        url: '/',
         templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
+        controller: 'MainCtrl', // since not a directive, we have to load controller here
+        resolve: {
+          loadMyFiles: function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              files: [
+                'scripts/controllers/main.js'
+              ]
+            })
+          }
+        }
       })
-      .otherwise({
-        redirectTo: '/'
+      .state('school-home', {
+        url: '/s',
+        templateUrl: 'views/school-home.html',
+        resolve: {
+          loadMyFiles: function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              files: [
+                'scripts/controllers/schoolController.js',
+                'styles/school-home.css'
+              ]
+            })
+          }
+        }
       });
   });
