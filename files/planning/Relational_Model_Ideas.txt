@@ -36,8 +36,6 @@ Location
 
 Student User
 Username
-First Name
-Last Name
 Major
 Class Standing
 Should we make it possible for recruiters to come look over the student users on the site?
