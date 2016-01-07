@@ -1,0 +1,31 @@
+.main-panel {
+	text-align: center;
+	background-color: #ffffff;
+	margin: 0 auto;
+	width: 70%;
+	margin-top: 20px;
+	min-height: 700px;
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 1em #333333;
+}
+.container {
+	min-width: 80%;
+	min-height: 25%;
+}
+.jumbotron {
+	height: 100%;
+	padding: 10px;
+	margin-bottom: 0px;
+}
+.jumbotron img {
+	height: 100%;
+	width: 100%;
+}
+.stats {
+	list-style: none;
+}
+.stats li {
+	display: inline;
+	padding-right: 20px;
+}
