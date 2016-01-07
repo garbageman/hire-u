@@ -1,9 +1,9 @@
-package org.hireu.campus.service;
+package org.hireu.campus.dao;
 
 import org.hireu.campus.model.Campus;
 
-public interface CampusService {
+public interface CampusDao {
 
   Campus getCampusFromUrl(String url);
-  
+
 }
