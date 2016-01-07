@@ -1,0 +1,4 @@
+url, dept_name, description, is_hiring, uid, contact, name
+umd, Stamp IT, Doing fun things at stamp, true, 2, Damien Nagle, IT work
+umd, Computer Science Department, Doing fun things with computers, false, 3, Damien Nagle, CS Assistant
+umd, Computer Science Department, Doing more things with computers, false, 4, Larry Herman, Resident village idiot
