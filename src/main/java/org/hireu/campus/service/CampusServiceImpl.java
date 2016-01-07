@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import org.hireu.campus.dao.CampusDao;
 import org.hireu.campus.model.Campus;
+import org.hireu.campus.model.JobCount;
 
 @Service
 public class CampusServiceImpl implements CampusService {
@@ -15,6 +16,11 @@ public class CampusServiceImpl implements CampusService {
   @Override
   public Campus getCampusFromUrl(String url) {
     return campusDao.getCampusFromUrl(url);
+  }
+
+  @Override
+  public JobCount getJobCount(String url) {
+    return campusDao.getJobCount(url);
   }
 
 }

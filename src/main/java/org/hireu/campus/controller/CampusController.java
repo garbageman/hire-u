@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import org.hireu.campus.service.CampusService;
 import org.hireu.campus.model.Campus;
+import org.hireu.campus.model.JobCount;
 
 @RestController
 public class CampusController {
@@ -18,5 +19,11 @@ public class CampusController {
   public Campus campus(@RequestParam(value="url", defaultValue="umd") String url) {
       return campusService.getCampusFromUrl(url);
   }
+
+  @RequestMapping("/jobcount")
+  public JobCount jobcount(@RequestParam(value="url", defaultValue="umd") String url) {
+      return campusService.getJobCount(url);
+  }
+
 
 }

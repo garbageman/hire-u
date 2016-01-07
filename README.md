@@ -35,12 +35,14 @@ user that under another name?
 ### Feel free to add anything to this list if you think it's important
 
 * Work on web design, figure out what we want the site to look like
-* Decide on what the first part of the site we want to build is
 * Set up security for user authentication using Spring as well
 * Create a relational diagram or something to help figure out what we want the db to look like
 * Create a model front end page that will be the template for all of the front end development. (Have a controller and services script coupled with some HTML)
-* Create a model JDBC/Spring REST endpoint so that it can be used as a template for the rest of development DN
+* Get parameter binding working DN
+* Comment endpoint code for readability/understanding DN
 * Add directions for development on different parts of the project. DN
+* Decide on what the first part of the site we want to build is DN 01/07/16
+* Create a model JDBC/Spring REST endpoint so that it can be used as a template for the rest of development DN 01/07/16
 * Add installation/setup directions for people new to the project DN 01/05/2016
 * Add a git best practices (or at least enough practices to not have problems) DN 12/30/15
 * Set up Postgres so that we can start using it for test data and relations DN 01/04/2016

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Repository;
 import java.sql.ResultSet;
 
 import org.hireu.campus.model.Campus;
+import org.hireu.campus.model.JobCount;
 
 @Repository
 public class CampusDaoImpl implements CampusDao {
@@ -18,6 +19,29 @@ public class CampusDaoImpl implements CampusDao {
     String sql = "select * from campus where url=\'" + url + "\';";
 
     return jdbcTemplate.query(sql, CampusDaoImpl.campusMapper());
+  }
+
+  public JobCount getJobCount(String url) {
+    String sql = "select count(*) as count from jobs where url=\'" + url + "\' and is_hiring=true;";
+
+    return jdbcTemplate.query(sql, CampusDaoImpl.jobCountMapper());
+  }
+
+  private static ResultSetExtractor<JobCount> jobCountMapper() {
+
+    return new ResultSetExtractor<JobCount>() {
+      public JobCount extractData(ResultSet rs) {
+        try {
+        rs.next();
+        return new JobCount(rs.getInt("count"));
+        } catch (java.sql.SQLException s) {
+                s.printStackTrace();
+        }
+
+        return null;
+      }
+    };
+
   }
 
   /**
@@ -40,6 +64,7 @@ public class CampusDaoImpl implements CampusDao {
         return null;
       }
     };
+
   }
 
 }
