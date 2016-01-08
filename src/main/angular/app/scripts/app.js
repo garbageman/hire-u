@@ -18,7 +18,6 @@ angular
     'ngTouch',
     'ui.router',
     'oc.lazyLoad'
-
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
@@ -39,8 +38,9 @@ angular
         }
       })
       .state('school-home', {
-        url: '/s',
+        url: '/s/umd',
         templateUrl: 'views/school-home.html',
+        controller: 'SchoolCtrl',
         resolve: {
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({
