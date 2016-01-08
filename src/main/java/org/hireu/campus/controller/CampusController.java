@@ -18,7 +18,7 @@ import org.hireu.campus.model.JobCount;
  /* This is marked as @RestController so that when spring scans the package to create beans */
  /* It will create a bean for this class */
 @RestController
-@RequestMapping("/campus")
+@RequestMapping("services/campus")
 public class CampusController {
 
   /* The services are autowired so the same instance of services is shared */

@@ -20,7 +20,7 @@ angular
     'oc.lazyLoad'
   ])
   .config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise("/");
+    $urlRouterProvider.otherwise('/');
 
     $stateProvider
       .state('main', {
@@ -33,12 +33,12 @@ angular
               files: [
                 'scripts/controllers/main.js'
               ]
-            })
+            });
           }
         }
       })
       .state('school-home', {
-        url: '/s/umd',
+        url: '/info?campus',
         templateUrl: 'views/school-home.html',
         controller: 'SchoolCtrl',
         resolve: {
@@ -48,7 +48,7 @@ angular
                 'scripts/controllers/schoolController.js',
                 'styles/school-home.css'
               ]
-            })
+            });
           }
         }
       });
