@@ -30,6 +30,8 @@ Example situation:
 You have been asked to add a page to the website. This page is for displaying information about departments in the site.
 You are working on the front end of this part of the application and your friend is working on the back end services.
 
+#### NOTE: Make sure that all your changes are committed before switching between branches, otherwise git will attempt to automerge your uncommitted changes.
+
 First create a new branch by using this command:
 
 #### git branch [branch name]
