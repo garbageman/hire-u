@@ -38,9 +38,9 @@ user that under another name?
 * Set up security for user authentication using Spring as well
 * Create a relational diagram or something to help figure out what we want the db to look like
 * Create a model front end page that will be the template for all of the front end development. (Have a controller and services script coupled with some HTML)
-* Get parameter binding working DN
-* Comment endpoint code for readability/understanding DN
 * Add directions for development on different parts of the project. DN
+* Get parameter binding working DN 01/07/16
+* Comment endpoint code for readability/understanding DN 01/07/16
 * Decide on what the first part of the site we want to build is DN 01/07/16
 * Create a model JDBC/Spring REST endpoint so that it can be used as a template for the rest of development DN 01/07/16
 * Add installation/setup directions for people new to the project DN 01/05/2016

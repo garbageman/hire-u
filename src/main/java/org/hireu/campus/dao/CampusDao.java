@@ -3,6 +3,10 @@ package org.hireu.campus.dao;
 import org.hireu.campus.model.Campus;
 import org.hireu.campus.model.JobCount;
 
+/**
+ * This is the interface for the dao, it is good to create an interface so the
+ * implementation can always be swapped out easily
+ */
 public interface CampusDao {
 
   Campus getCampusFromUrl(String url);
