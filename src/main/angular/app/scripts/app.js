@@ -38,7 +38,7 @@ angular
         }
       })
       .state('school-home', {
-        url: '/info?campus',
+        url: '/s/:campus',
         templateUrl: 'views/school-home.html',
         controller: 'SchoolCtrl',
         resolve: {

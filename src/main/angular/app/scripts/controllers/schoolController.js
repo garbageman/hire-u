@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hireUApp')
-.controller('SchoolCtrl', function($scope, $state, CampusService) {
+.controller('SchoolCtrl', function($scope, $state, $stateParams, CampusService) {
 	$scope.jobs = [
 		{
 			'rank': 1,
@@ -16,7 +16,7 @@ angular.module('hireUApp')
 	];
 
 	function getCampusInfo() {
-		CampusService.getCampusInfo($state.params.campus).then(
+		CampusService.getCampusInfo($stateParams.campus).then(
 			function (response) {
 				if (response.data !== null) {
 					$scope.campus = {};
