@@ -1,35 +1,19 @@
 package org.hireu.campus.service;
 
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.ResultSetExtractor;
-import java.sql.ResultSet;
 import org.hireu.campus.model.Campus;
+import org.hireu.campus.model.JobCount;
 
-public class CampusService {
-
-  @Autowired
-  private JdbcTemplate jdbcTemplate;
+/* This is the interface for the campus services */
+public interface CampusService {
 
   /**
-   * Returns a ResultSetExtractor that creates a campus from
-   * the result set
+   * Returns the campus information for the given url
    */
-  public static ResultSetExtractor<Campus> campusMapper() {
-    return new ResultSetExtractor<Campus>() {
-      public Campus extractData(ResultSet rs) {
-        try {
-        rs.next();
-        return new Campus(rs.getString("university"),
-                          rs.getString("city"),
-                          rs.getString("state"));
-        } catch (java.sql.SQLException s) {
-                s.printStackTrace();
-        }
+  Campus getCampusFromUrl(String url);
 
-        return null;
-      }
-    };
-  }
+  /**
+   * Returns the job count for the given url
+   */
+  JobCount getJobCount(String url);
 
 }

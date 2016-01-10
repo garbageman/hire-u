@@ -1,0 +1,12 @@
+Rest Endpoints
+
+/positions/oncampus
+/positions/oncampus?url=umd - Gets all jobs at umd
+/positions/company?url=hireu - Gets all jobs at hireU
+/positions/research?url=umd - Gets all research positions at umd
+/positions/top?url=umd&num=5 - Gets top 5 rated positions at umd
+
+
+/reviews?url=umd&dept=Division+of+Technology&title=Student+Engineer
+
+/users?username=dnagle - Gets info about user dnagle

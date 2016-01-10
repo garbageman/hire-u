@@ -24,10 +24,9 @@ That's it for now! I hope you enjoy the site :D
 ## Wireframe (concept)
 https://wireframe.cc/WrKvBv
 
-## Long term goals:
-* What is going to set this website apart from other sites?
-* - We can do research in automated account removal. How can we distinguish unique users? How do we know if a user is not just another
-user that under another name?
+## Web development timeline
+Where are we in this timeline? LOL
+http://i.imgur.com/LHT4Ebu.jpg
 
 ## TODO
 ### If you plan on doing a task, initial it and then when it is done add the date that it was finished
@@ -35,12 +34,17 @@ user that under another name?
 ### Feel free to add anything to this list if you think it's important
 
 * Work on web design, figure out what we want the site to look like
-* Decide on what the first part of the site we want to build is
 * Set up security for user authentication using Spring as well
 * Create a relational diagram or something to help figure out what we want the db to look like
 * Create a model front end page that will be the template for all of the front end development. (Have a controller and services script coupled with some HTML)
-* Create a model JDBC/Spring REST endpoint so that it can be used as a template for the rest of development DN
+* Create a map of the site. What pages will we have and how will they link to each other?
+* Create wireframes for pages
+* Logo design? :D
 * Add directions for development on different parts of the project. DN
+* Get parameter binding working DN 01/07/16
+* Comment endpoint code for readability/understanding DN 01/07/16
+* Decide on what the first part of the site we want to build is DN 01/07/16
+* Create a model JDBC/Spring REST endpoint so that it can be used as a template for the rest of development DN 01/07/16
 * Add installation/setup directions for people new to the project DN 01/05/2016
 * Add a git best practices (or at least enough practices to not have problems) DN 12/30/15
 * Set up Postgres so that we can start using it for test data and relations DN 01/04/2016
