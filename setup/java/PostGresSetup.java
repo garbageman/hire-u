@@ -146,7 +146,7 @@ public class PostGresSetup {
   public static void main(String[] argv) {
         System.out.println("Setting up the HireU database");
 
-        try (BufferedReader br = new BufferedReader(new FileReader(new File("/CMSC/HireU/webapp/setup/files/csvinfo.csv")))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(new File(System.getProperty("user.dir") + "/files/csvinfo.csv")))) {
 
             boolean done = false;
             while (true) {
@@ -173,7 +173,7 @@ public class PostGresSetup {
               createTable(relation,attributes);
 
               /* Fill the table from file */
-              fillTable(path, relation);
+              fillTable(System.getProperty("user.dir") + path, relation);
             }
 
         } catch (FileNotFoundException f) {
