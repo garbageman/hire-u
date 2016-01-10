@@ -15,13 +15,17 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 </head>
+<nav-bar></nav-bar> 
 <body ng-app="hireUApp">
+
+<!-- navigation directive -->
+
   <div class="wrapper">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       <![endif]-->
 
-        <div ui-view></div>
+        <div ui-view class="main-content"></div>
       <!-- <div class="footer">
         Copyright &copy; 2015 hireU Team
       </div> -->
@@ -57,8 +61,13 @@
 
    <!-- build:js({.tmp,app}) scripts/scripts.js -->
    <script src="scripts/app.js"></script>
+
+   <!-- import hireU dependencies manually here -->
    <script src="config/config.js"></script>
    <script src="scripts/services/schoolService.js"></script>
+
+   <script src="scripts/directives/navbar/navbar.js"></script>
+
    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
    <script src="bower_components/oclazyload/dist/ocLazyLoad.min.js"></script>
    <!-- endbuild -->

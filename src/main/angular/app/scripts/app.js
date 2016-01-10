@@ -8,6 +8,8 @@
  *
  * Main module of the application.
  */
+
+var app = 
 angular
   .module('hireUApp', [
     'ngAnimate',
@@ -18,8 +20,8 @@ angular
     'ngTouch',
     'ui.router',
     'oc.lazyLoad'
-  ])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  ]);
+  app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
