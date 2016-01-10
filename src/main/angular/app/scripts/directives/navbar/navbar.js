@@ -1,7 +1,7 @@
-angular.module("hireuApp", [])
-.directive("navbar", function() {
-	return {
-		restrict: 'EA',
-		templateUrl: 'navbar.html'
-	}
-});
+// angular.module("hireUApp", [])
+// .directive("navBar", function() {
+// 	return {
+// 		restrict: 'EA',
+// 		templateUrl: 'scripts/directives/navbar/navbar.html'
+// 	};
+// });
