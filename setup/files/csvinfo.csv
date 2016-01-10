@@ -1,16 +1,16 @@
 department
 campus, name, location
 varchar(255), varchar(255), varchar(255)
-/CMSC/HireU/webapp/setup/files/departments.csv
+/files/departments.csv
 campus
 university, city, state, url
 varchar(255), varchar(255), varchar(255), varchar(255)
-/CMSC/HireU/webapp/setup/files/campuses.csv
+/files/campuses.csv
 jobs
 url, dept_name, description, is_hiring, uid, contact, name
 varchar(255), varchar(255), varchar(2000), boolean, varchar(255), varchar(255), varchar(255)
-/CMSC/HireU/webapp/setup/files/jobs.csv
+/files/jobs.csv
 reviews
 uid, rating, summary
 varchar(255), integer, varchar(2000)
-/CMSC/HireU/webapp/setup/files/reviews.csv
+/files/reviews.csv
