@@ -16,6 +16,12 @@
   <!-- endbuild -->
 </head>
 <body ng-app="hireUApp">
+  <div class ="navbar">
+    <img class="logo" ng-src="images/logo.png"></img>
+    <select name="campusSelect" ng-model="option" ng-change="reroute(option)"></select>
+    <a href="#/positions"> Jobs </a>
+    <a href="#/departments"> Departments </a>
+  </div>
   <div class="wrapper">
     <!--[if lte IE 8]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
