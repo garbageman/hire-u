@@ -10,6 +10,9 @@ body {
 .wrapper {
   min-height: 100%;
   position: relative;
+  /* make buffer for navigation bar, 
+  set top to height of bar */
+  top: 60px;
 }
 .dev {
   background-color: #ffffff;
@@ -101,4 +104,31 @@ a:active {
 }
 .job-description {
   display: block;
+}
+.navigation {
+  width: 100%;
+  background-color: black;
+  color: white;
+  padding: 10px;
+  height: 60px;
+  position: fixed;
+  z-index: 1000;
+  margin-bottom: 20px;
+  line-height: 35px;
+  box-shadow: 0px 2px .5em black;
+}
+.navigation .nav-links {
+  float: right;
+  list-style: none;
+}
+.navigation li {
+  display: inline;
+  padding-left: 20px;
+}
+.navigation a {
+  cursor: pointer;
+  color: yellow;
+}
+.navigation .logo {
+  float: left;
 }
