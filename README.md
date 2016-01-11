@@ -36,11 +36,12 @@ http://i.imgur.com/LHT4Ebu.jpg
 * Work on web design, figure out what we want the site to look like
 * Set up security for user authentication using Spring as well
 * Create a relational diagram or something to help figure out what we want the db to look like
-* Create a model front end page that will be the template for all of the front end development. (Have a controller and services script coupled with some HTML)
 * Create a map of the site. What pages will we have and how will they link to each other?
 * Create wireframes for pages
+* Create a story for the website, how are we selling this to people? (KYLE)
 * Logo design? :D
 * Add directions for development on different parts of the project. DN
+* Create a model front end page that will be the template for all of the front end development. (Have a controller and services script coupled with some HTML) DN 01/10/16
 * Get parameter binding working DN 01/07/16
 * Comment endpoint code for readability/understanding DN 01/07/16
 * Decide on what the first part of the site we want to build is DN 01/07/16
