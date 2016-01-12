@@ -56,5 +56,18 @@ angular
             });
           }
         }
+      })
+      .state('job-description', {
+        url : '/j/job',
+        templateUrl : 'views/job.html',
+        resolve: {
+          loadMyFiles: function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              files: [
+                'styles/job.css'
+              ]
+            });
+          }
+        }
       });
   });
