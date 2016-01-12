@@ -1,6 +1,12 @@
 # Creating endpoints
-# Flesh this out when finished with model
-## TODO: Reorganize endpoint packaging
+
+The endpoint for campus services has been documented pretty well so if there is any confusion you can reference that.
+
+## Spring overview
+
+In this app we are using Spring to create our REST services that interface with the database. Spring does a good job at organizing services through annotations.
+
+## Endpoint creation
 
 An endpoint should be associated with a particular part of our application.
 Create a Dao for the endpoint, this handles the sql transactions and mappers.
