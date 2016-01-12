@@ -7,6 +7,7 @@ I will explain how each part of a page works and how to develop a page. To begin
 
 Initially, you need to add routing to the page to app.js. It will look something like this:
 
+```
 .state('testpage', {
   url: '/testpage',
   templateUrl: 'views/testpage.html',
@@ -23,6 +24,7 @@ Initially, you need to add routing to the page to app.js. It will look something
     }
   }
 })
+```
 
 In app.js these are chained together, so adding this into the middle shouldn't cause any errors. The setup is pretty straight forward. url designates the path that must be requested for the page to load. templateUrl designates the html file that will be used as a template for loading your page. controller designates the controller that will be supplying data to your page.
 resolve tells the app what files need to be loaded when rendering this webpage.
@@ -31,17 +33,21 @@ We use $ocLazyLoad to load in files only when a particular page is requested (th
 
 When developing an angular webapp, each individual page does not need all of the boilerplate html code that normal html needs. All that needs to be defined is a div that will hold everything that you want in your page. A simple page with only a header would look like this:
 
+```
 <div class = "testpage">
   <h3> This is a test page </h3>
 </div>
+```
 
 What is nice about angular is that you can control what is displayed in your html with what are called directives.
 Directives are just html markers that let angular know that you want to give some sort of functionality to the html you're marking. One of the simplest directives is ###ng-if. Say you wanted a div to only appear when a boolean ###isComplete is true. In order to do that you simply would have to write something like this:
 
+```
 <div class="testpage">
   <h3> This is a test page </h3>
   <div ng-if="isComplete"> Yay! We created a page! </div>
 </div>
+```
 
 It's as simple as that! Angular has a lot of directives that are very useful so generally the AngularJS API and google can help you find a directive that will help you accomplish your task. You can always look at the HTML in this project for examples of how to use directives.
 
@@ -49,10 +55,14 @@ You can use CSS to style your page. Create a css file for your page specifically
 
 These directives won't do anything unless there is a controller supplying values to them. This is where you will have to write a little javascript that will act as the controller of the html view that you have created. When you are creating a webapp with Angular, to start you will have named your app in app.js (app.js usually the script that handles all the routing of the application and piecing all the scripts and html together). Here in HireU we have our app named HireUApp. If I wanted to create a controller for my new page it would look something like this:
 
+
+```
 angular.module('HireUApp')
 .controller('TestPageCtrl', function(){
 
 });
+```
+
 
 Here we are creating a controller for our HireUApp. Each page we create will have its own scope. This is similar to how scopes work in normal programming.
 The variables defined in the scope of your controller, will only have those values within the scope of your page.
@@ -60,13 +70,18 @@ The variables defined in the scope of your controller, will only have those valu
 So if we wanted to give isComplete a value then we can assign it in the the controller. Angular uses the same $scope that all javascript uses, you just have to specify it in the function parameters.
 
 
+```
 angular.module('HireUApp')
 .controller('TestPageCtrl', function($scope){
   $scope.isComplete = true;
 });
+```
+
 
 Not only can you define variables in the scope from the controller, you can also use data received from services to put inside the html.
 Say that we actually wanted to retrieve the boolean value from some REST service endpoint that we have implemented. We would create our own services like this:
+
+
 
 angular.module('HireUApp')
 .service('TestPageService', function($q, $http) {
@@ -91,8 +106,12 @@ angular.module('HireUApp')
 
 });
 
+
+
 An explanation of what is going on in each part of the service definition:
 
+
+```
 angular.module('HireUApp')
 .service('TestPageService', function($q, $http) {
   -- This is the function definition to get the boolean with an ajax call
@@ -132,9 +151,14 @@ angular.module('HireUApp')
   }
 
 });
+```
+
+
 
 In order to make ajax calls less cumbersome, we have created a config script that is effectively a giant JSON to store values like url paths for us. You can use the script by adding it to the parameters of the function. If we wanted to use the config to get our endpoint URL then we the service would look something like this:
 
+
+```
 angular.module('HireUApp')
 .service('TestPageService', function($q, $http, CONFIG) {
   this.getBoolean = function() {
@@ -157,9 +181,14 @@ angular.module('HireUApp')
   }
 
 });
+```
+
+
 
 The config script would look like this:
 
+
+```
 angular.module('hireUApp')
 .value('CONFIG', {
   url : {
@@ -169,20 +198,27 @@ angular.module('hireUApp')
     }
   }
 });
+```
+
+
 
 ## Development practices
 
-Initially you will want to create the html of the page. It's generally a good idea to try to write the html with a static controller before adding the services. So if you want to display a particular value, just hard code the value into the controller until the html is finished. This way you know things are displaying properly and you avoid having controller/service issues mess with your html. 
+Initially you will want to create the html of the page. It's generally a good idea to try to write the html with a static controller before adding the services. So if you want to display a particular value, just hard code the value into the controller until the html is finished. This way you know things are displaying properly and you avoid having controller/service issues mess with your html.
 
 Once you know what information you will need to display get someone to create endpoints for you and add them to the CONFIG json.
 
 Generally we want to separate logical operations and data retrieval, which is the purpose of having services. Your services should only ever retrieve data and return a promise. It is up to your controller to figure out what it wants to do with the values that it is receiving. It is ok to clean up the data youre returning in services, for example if the REST service returns a JSON full of data but youre only concerned about some field X in the data instead of assigning data just the whole data object you can write something like:
 
+
+```
 .success(function(data) {
   deferred.resolve({ status :'SUCCESS',
     message : 'Success in GET test info',
     data : data.X
   });
 })
+```
+
 
 This will return the value of X instead of the whole response that you got from the endpoint.
