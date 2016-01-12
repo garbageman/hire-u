@@ -15,7 +15,7 @@ body {
 .wrapper {
   min-height: 100%;
   position: relative;
-  /* make buffer for navigation bar, 
+  /* make buffer for navigation bar,
   set top to height of bar */
   top: 60px;
 }
@@ -78,9 +78,6 @@ a:active {
 }
 #job-listings {
   padding: 20px;
-}
-.job {
-
 }
 /* Custom page footer */
 .footer {

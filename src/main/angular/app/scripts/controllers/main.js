@@ -26,4 +26,5 @@ angular.module('hireUApp')
 			'image': '/images/house.jpg'
 		}
 	];
+	
 }]);

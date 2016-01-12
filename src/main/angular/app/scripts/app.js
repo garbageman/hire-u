@@ -49,7 +49,9 @@ angular
             return $ocLazyLoad.load({
               files: [
                 'scripts/controllers/schoolController.js',
-                'styles/school-home.css'
+                'styles/school-home.css',
+                'scripts/services/schoolService.js',
+                'config/config.js'
               ]
             });
           }
