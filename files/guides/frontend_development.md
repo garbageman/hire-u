@@ -117,7 +117,8 @@ angular.module('HireUApp')
   -- This is the function definition to get the boolean with an ajax call
   this.getBoolean = function() {
     -- This is what's called a promise.
-    -- Since ajax calls are whats called asynchronous, meaning they execute separate from the main thread, there's no guarantee that the result thats returned has a value.
+    -- Since ajax calls are whats called asynchronous, meaning they execute separate from the main thread,
+    -- there's no guarantee that the result thats returned has a value.
     -- This is why we return what's called a promise, which says 'Eventually this will have a value'
     -- We create the promise here
 
