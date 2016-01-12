@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 
-var app = 
+var app =
 angular
   .module('hireUApp', [
     'ngAnimate',
@@ -33,7 +33,8 @@ angular
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({
               files: [
-                'scripts/controllers/main.js'
+                'scripts/controllers/main.js',
+                'styles/main.css'
               ]
             });
           }
