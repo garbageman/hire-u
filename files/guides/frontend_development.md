@@ -82,7 +82,7 @@ Not only can you define variables in the scope from the controller, you can also
 Say that we actually wanted to retrieve the boolean value from some REST service endpoint that we have implemented. We would create our own services like this:
 
 
-
+```
 angular.module('HireUApp')
 .service('TestPageService', function($q, $http) {
   this.getBoolean = function() {
@@ -105,7 +105,7 @@ angular.module('HireUApp')
   }
 
 });
-
+```
 
 
 An explanation of what is going on in each part of the service definition:
