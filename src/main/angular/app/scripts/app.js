@@ -57,6 +57,20 @@ angular
           }
         }
       })
+      .state('department-search', {
+        url: '/search/department',
+        templateUrl: 'components/departmentsearch/DepartmentSearch.html',
+        controller: 'DeptSearchCtrl',
+        resolve: {
+          loadMyFiles: function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              files: [
+                'components/departmentsearch/DepartmentSearchController.js'
+              ]
+            });
+          }
+        }
+      })
       .state('job-description', {
         url : '/j/job',
         templateUrl : 'components/job/job.html',
