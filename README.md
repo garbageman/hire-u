@@ -41,6 +41,9 @@ http://i.imgur.com/LHT4Ebu.jpg
 * Create a story for the website, how are we selling this to people? (KYLE)
 * Logo design? :D
 * Add directions for development on different parts of the project. DN
+* Create a login page for users/employers
+* Create a homepage for users
+* Create a navigation bar for the website DN 1/13/16
 * Create a model front end page that will be the template for all of the front end development. (Have a controller and services script coupled with some HTML) DN 01/10/16
 * Get parameter binding working DN 01/07/16
 * Comment endpoint code for readability/understanding DN 01/07/16
