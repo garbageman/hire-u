@@ -38,7 +38,7 @@ angular
         }
       })
       .state('school-home', {
-        url: '/info?campus',
+        url: '/s/:campus',
         templateUrl: 'views/school-home.html',
         controller: 'SchoolCtrl',
         resolve: {
@@ -47,6 +47,19 @@ angular
               files: [
                 'scripts/controllers/schoolController.js',
                 'styles/school-home.css'
+              ]
+            });
+          }
+        }
+      })
+      .state('job-description', {
+        url : '/j/job',
+        templateUrl : 'views/job.html',
+        resolve: {
+          loadMyFiles: function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              files: [
+                'styles/job.css'
               ]
             });
           }
