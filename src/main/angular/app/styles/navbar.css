@@ -1,0 +1,45 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+.navigation-logo {
+  font-family: "Montserrat";
+  font-size : 24px;
+  text-align: center;
+  padding-top: 1rem;
+  font-weight : bold;
+}
+
+.navigation-link {
+  padding-right: 2rem;
+}
+
+.navigation-campus {
+  float : left;
+  display : flex;
+  justify-content: center;
+}
+
+.navigation-links {
+  display : inline-block;
+  padding-top : 2rem;
+}
+
+.navigation-login {
+  float : right;
+  display : flex;
+  justify-content: center;
+  padding-top : 1rem;
+}
+
+.navigation-campus {
+  padding-top : 1rem;
+  padding-left : 8rem;
+}
+
+.navigation-button {
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.navigation {
+  background-color: #FAFAFA
+}

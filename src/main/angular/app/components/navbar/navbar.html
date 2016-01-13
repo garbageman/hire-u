@@ -1,0 +1,25 @@
+<div class="navigation row">
+
+	<div class = "navigation-logo col-md-4">
+		hire.u
+	</div>
+
+	<div class = "navigation-links col-md-4">
+		<a class = "navigation-link"> Job Postings </a>
+		<a class = "navigation-link"> Departments </a>
+		<a class = "navigation-link"> Reviews </a>
+		<a class = "navigation-link"> Research </a>
+	</div>
+
+ <div class = "navigation-campus col-md-2">
+	 <button class="navigation-button btn btn-default" ng-if="!selecting" ng-click="select(currentCampus)">{{ currentCampus }}</button>
+
+	 <select name="campuses" ng-model="currentCampus" ng-change="select(currentCampus)" ng-if="selecting">
+			 <option ng-repeat="option in schools" value="{{option.name}}">{{option.name}}</option>
+	 </select>
+ </div>
+
+	<div class="navigation-login col-md-1">
+		<button class = "btn btn-success"> Login </button>
+	</div>
+</div>

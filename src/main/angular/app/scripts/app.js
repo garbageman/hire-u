@@ -27,13 +27,13 @@ angular
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: 'views/main.html',
+        templateUrl: 'components/main/main.html',
         controller: 'MainCtrl', // since not a directive, we have to load controller here
         resolve: {
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({
               files: [
-                'scripts/controllers/main.js',
+                'components/main/main.js',
                 'styles/main.css'
               ]
             });
@@ -42,15 +42,15 @@ angular
       })
       .state('school-home', {
         url: '/s/:campus',
-        templateUrl: 'views/school-home.html',
+        templateUrl: 'components/school/school-home.html',
         controller: 'SchoolCtrl',
         resolve: {
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({
               files: [
-                'scripts/controllers/schoolController.js',
+                'components/school/schoolController.js',
                 'styles/school-home.css',
-                'scripts/services/schoolService.js',
+                'components/school/schoolService.js',
                 'config/config.js'
               ]
             });
@@ -59,7 +59,7 @@ angular
       })
       .state('job-description', {
         url : '/j/job',
-        templateUrl : 'views/job.html',
+        templateUrl : 'components/job/job.html',
         resolve: {
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({
