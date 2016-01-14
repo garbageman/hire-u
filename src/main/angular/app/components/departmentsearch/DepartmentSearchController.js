@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('hireUApp')
-.controller('DeptSearchCtrl', function($scope) {
+.controller('DeptSearchCtrl', function($scope, $compile) {
   $scope.departments = [
     'Department of Agriculture',
     'Department of Information Technology',
@@ -10,4 +10,5 @@ angular.module('hireUApp')
     'Department of Chemistry',
     'Department of Nuclear Physics'
   ];
+  
 });

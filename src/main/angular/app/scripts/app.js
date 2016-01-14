@@ -19,7 +19,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'oc.lazyLoad'
+    'oc.lazyLoad',
+    'ui.autocomplete'
   ]);
   app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
