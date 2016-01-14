@@ -3,9 +3,8 @@
 angular.module('hireUApp')
 .directive('search', function() {
   return {
-    scope : {
-      list : '='
-    },
+    restrict: 'E',
+    transclude: true,
     templateUrl : 'components/search/search.html'
   }
 });

@@ -20,7 +20,7 @@ angular
     'ngTouch',
     'ui.router',
     'oc.lazyLoad',
-    'ui.autocomplete'
+    'ui.select'
   ]);
   app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
