@@ -12,27 +12,16 @@
   padding-right: 2rem;
 }
 
-.navigation-campus {
-  float : left;
+.navigation-links {
   display : flex;
   justify-content: center;
-}
-
-.navigation-links {
-  display : inline-block;
   padding-top : 2rem;
 }
 
 .navigation-login {
-  float : right;
   display : flex;
   justify-content: center;
   padding-top : 1rem;
-}
-
-.navigation-campus {
-  padding-top : 1rem;
-  padding-left : 8rem;
 }
 
 .navigation-button {
