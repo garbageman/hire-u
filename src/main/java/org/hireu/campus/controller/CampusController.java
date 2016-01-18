@@ -1,13 +1,14 @@
 package org.hireu.campus.controller;
 
+import org.hireu.campus.model.Campus;
+import org.hireu.campus.model.JobCount;
+import org.hireu.campus.service.CampusService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import org.hireu.campus.service.CampusService;
-import org.hireu.campus.model.Campus;
-import org.hireu.campus.model.JobCount;
+import java.util.List;
 
 /**
  * This is the controller for the campus endpoints. All this does is return
@@ -43,6 +44,11 @@ public class CampusController {
   @RequestMapping("/jobcount")
   public JobCount jobcount(@RequestParam(value="url", defaultValue="umd") String url) {
       return campusService.getJobCount(url);
+  }
+
+  @RequestMapping("/all")
+  public List<Campus> getAllCampus() {
+    return campusService.getAll();
   }
 
 

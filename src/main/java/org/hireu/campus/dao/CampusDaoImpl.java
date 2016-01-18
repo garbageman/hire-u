@@ -1,15 +1,16 @@
 package org.hireu.campus.dao;
 
-import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.RowMapper;
-import org.springframework.stereotype.Repository;
-import java.sql.ResultSet;
-import java.util.Collections;
-import java.util.Map;
-
 import org.hireu.campus.model.Campus;
 import org.hireu.campus.model.JobCount;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.RowMapper;
+import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+import java.sql.ResultSet;
+import java.util.Collections;
+import java.util.List;
+import java.util.Map;
 
 /**
  * This is the Dao implementation. A DAO is short for Data Access Object, this is the Object
@@ -47,7 +48,15 @@ public class CampusDaoImpl implements CampusDao {
 
     Map<String, String> namedParameters = Collections.singletonMap("campus_url", url);
 
+
     return namedParameterJdbcTemplate.queryForObject(sql, namedParameters, CampusDaoImpl.jobCountMapper());
+  }
+
+  public List<Campus> getAllCampus() {
+    String sql= "select * from campus";
+
+    Map<String, String> nameParameter = Collections.singletonMap("","");
+    return namedParameterJdbcTemplate.query(sql, nameParameter, CampusDaoImpl.campusMapper());
   }
 
   /* This method returns an anonymous rowMapper that maps a resultset row*/
@@ -83,7 +92,7 @@ public class CampusDaoImpl implements CampusDao {
         }
 
         return null;
-      }
+        }
     };
 
   }
