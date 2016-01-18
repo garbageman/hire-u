@@ -57,6 +57,21 @@ angular
           }
         }
       })
+      .state('login', {
+        url: '/login',
+        templateUrl: 'components/login/login.html',
+        controller: 'LoginCtrl',
+        resolve: {
+          loadMyFiles: function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              files: [
+                'components/login/LoginController.js',
+                'components/login/login.css'
+              ]
+            });
+          }
+        }
+      })
       .state('job-description', {
         url : '/j/job',
         templateUrl : 'components/job/job.html',

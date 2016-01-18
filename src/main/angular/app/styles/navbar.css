@@ -32,3 +32,14 @@
 .navigation {
   background-color: #FAFAFA
 }
+
+.navigation-login-button {
+  color : white!important;
+}
+.navigation-home, a:visited {
+  color : black;
+}
+
+a:link, a:visited, a:hover {
+    text-decoration: none;
+}
