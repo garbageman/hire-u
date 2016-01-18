@@ -1,9 +1,5 @@
 <div class = "accountinfo">
   <div class = "accountinfo-form">
-    <div class = "accountinfo-email">
-      <p> Email: </p>
-      <input class ="accountinfo-email-text" value = "{{email}}">
-    </div>
     <div class = "accountinfo-firstname">
       <p> First Name: </p>
       <input class ="accountinfo-firstname-text" value = "{{firstName}}">
@@ -12,9 +8,24 @@
       <p> Last Name: </p>
       <input class ="accountinfo-lastname-text" value = "{{lastName}}">
     </div>
+    <div class = "accountinfo-email">
+      <p> Email: </p>
+      <input class ="accountinfo-email-text" value = "{{email}}">
+    </div>
+    <div class = "accountinfo-year">
+      <p> Year: </p>
+      <search ng-model="year" type="yeartype" list="yearlist"></search>
+    </div>
+    <div class = "accountinfo-major">
+      <p> Major: </p>
+      <search ng-model="major" type="majortype" list="majorlist"></search>
+    </div>
     <div class = "accountinfo-campus">
       <p> Institution: </p>
-      <search ng-model="selection" type="listtype" list="testlist"></search>
+      <search ng-model="institution" type="institutiontype" list="campuslist"></search>
+    </div>
+    <div class = "accountinfo-confirmation">
+      <a class = "accountinfo-confirmation btn btn-primary btn-success"> Update Info </a>
     </div>
   </div>
 </div>

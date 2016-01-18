@@ -5,7 +5,7 @@ angular.module('hireUApp').controller('AccountInfoCtrl', function($scope) {
   $scope.firstName = 'Damien';
   $scope.lastName = 'Nagle';
 
-  $scope.testlist = [
+  $scope.campuslist = [
     'Rutgers University - New Brunswick',
     'University of Maryland - College Park',
     'University of Maryland - Baltimore County',
@@ -14,5 +14,23 @@ angular.module('hireUApp').controller('AccountInfoCtrl', function($scope) {
     'Georgetown University'
   ];
 
-  $scope.listtype = 'institution';
+  $scope.yearlist = [
+    'Freshman',
+    'Sophomore',
+    'Junior',
+    'Senior'
+  ];
+
+  $scope.majorlist = [
+    'Computer Science',
+    'Art',
+    'Chemistry',
+    'Biology',
+    'Business',
+    'Basket Weaving'
+  ];
+
+  $scope.institutiontype = 'institution';
+  $scope.majortype = 'major';
+  $scope.yeartype = 'year'
 });
