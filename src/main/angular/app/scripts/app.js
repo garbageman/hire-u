@@ -66,7 +66,10 @@ angular
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({
               files: [
-                'components/departmentsearch/DepartmentSearchController.js'
+                'components/departmentsearch/DepartmentSearchController.js',
+                'components/select2/select.css',
+                'components/search/search.js',
+                'components/select2/select.js'
               ]
             });
           }
@@ -82,6 +85,24 @@ angular
               files: [
                 'components/login/LoginController.js',
                 'components/login/login.css'
+              ]
+            });
+          }
+        }
+      })
+      .state('accountinfo', {
+        url: '/accountinfo',
+        templateUrl: 'components/accountinfo/accountinfo.html',
+        controller: 'AccountInfoCtrl',
+        resolve: {
+          loadMyFiles: function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              files: [
+                'components/accountinfo/AccountInfoController.js',
+                'components/accountinfo/accountinfo.css',
+                'components/select2/select.css',
+                'components/search/search.js',
+                'components/select2/select.js'
               ]
             });
           }

@@ -22,6 +22,17 @@ angular.module('hireUApp')
 
              scope.selected = ngModelCtrl.$viewValue;
           };
+      },
+      resolve: {
+        loadMyFiles: function($ocLazyLoad) {
+          return $ocLazyLoad.load({
+            files: [
+              'components/search/search.js',
+              'components/select2/select.js',
+              'components/select2/select.css'
+            ]
+          });
+        }
       }
   }
 });
