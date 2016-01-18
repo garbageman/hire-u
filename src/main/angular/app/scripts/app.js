@@ -8,6 +8,8 @@
  *
  * Main module of the application.
  */
+
+var app =
 angular
   .module('hireUApp', [
     'ngAnimate',
@@ -18,20 +20,21 @@ angular
     'ngTouch',
     'ui.router',
     'oc.lazyLoad'
-  ])
-  .config(function ($stateProvider, $urlRouterProvider) {
+  ]);
+  app.config(function ($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise('/');
 
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: 'views/main.html',
+        templateUrl: 'components/main/main.html',
         controller: 'MainCtrl', // since not a directive, we have to load controller here
         resolve: {
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({
               files: [
-                'scripts/controllers/main.js'
+                'components/main/main.js',
+                'styles/main.css'
               ]
             });
           }
@@ -39,14 +42,30 @@ angular
       })
       .state('school-home', {
         url: '/s/:campus',
-        templateUrl: 'views/school-home.html',
+        templateUrl: 'components/school/school-home.html',
         controller: 'SchoolCtrl',
         resolve: {
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({
               files: [
-                'scripts/controllers/schoolController.js',
-                'styles/school-home.css'
+                'components/school/schoolController.js',
+                'styles/school-home.css',
+                'components/school/schoolService.js',
+                'config/config.js'
+              ]
+            });
+          }
+        }
+      })
+      .state('department-search', {
+        url: '/search/department',
+        templateUrl: 'components/departmentsearch/DepartmentSearch.html',
+        controller: 'DeptSearchCtrl',
+        resolve: {
+          loadMyFiles: function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              files: [
+                'components/departmentsearch/DepartmentSearchController.js'
               ]
             });
           }
@@ -54,7 +73,7 @@ angular
       })
       .state('job-description', {
         url : '/j/job',
-        templateUrl : 'views/job.html',
+        templateUrl : 'components/job/job.html',
         resolve: {
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({

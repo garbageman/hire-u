@@ -4,12 +4,16 @@ body {
   padding: 0;
   height: 100%;
 }
+
 .container {
   padding-bottom: 40px;
 }
 .wrapper {
   min-height: 100%;
   position: relative;
+  /* make buffer for navigation bar,
+  set top to height of bar */
+  top: 60px;
 }
 .dev {
   background-color: #ffffff;
@@ -48,31 +52,12 @@ a:active {
   margin: 0 auto;
   padding-left: 5px;
 }
-#nav-container {
-  height: 75px;
-}
-#nav-list {
-  list-style: none;
-  line-height: 75px;
-  text-align: center;
-  margin-left: 50px;
-}
-#nav-list li {
-  display: inline-block;
-  padding-right: 100px;
-  font-size: 1em;
-}
-#nav-list li a:hover {
-  text-decoration: none;
-}
+
 .column-element {
   margin: 10px;
 }
 #job-listings {
   padding: 20px;
-}
-.job {
-
 }
 /* Custom page footer */
 .footer {
