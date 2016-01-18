@@ -2,7 +2,7 @@
 
 angular.module('hireUApp')
 .controller('DeptSearchCtrl', function($scope) {
-  $scope.list = [
+  $scope.testlist = [
     'Department of Agriculture',
     'Department of Information Technology',
     'Department of Transportation Services',
@@ -12,5 +12,7 @@ angular.module('hireUApp')
   ];
 
   $scope.selected = null;
+
+  $scope.controllertype='department';
 
 });
