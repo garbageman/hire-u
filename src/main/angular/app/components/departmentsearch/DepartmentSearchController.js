@@ -11,4 +11,6 @@ angular.module('hireUApp')
     'Department of Nuclear Physics'
   ];
 
+  $scope.selected = null;
+
 });

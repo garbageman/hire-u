@@ -1,5 +1,5 @@
 <div class = "search-directive">
-  <p>Selected: {{selected}}</p>
+  <p> Selected : {{selected}} </p>
   <ui-select ng-model="selected" theme="bootstrap" ng-disabled="disabled" style="width: 300px;">
     <ui-select-match placeholder="Select or search a country in the list...">{{$select.selected}}</ui-select-match>
     <ui-select-choices repeat="element in list | filter: $select.search">
