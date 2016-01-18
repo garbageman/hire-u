@@ -21,7 +21,9 @@ public class JobsController {
 
     @RequestMapping("/oncampus")
     public List<Job> campusJobs(@RequestParam (value="url", defaultValue = "umd") String campus) {
-        return jobsService.get_jobs_from_campus(campus);
+//        return jobsService.get_jobs_from_campus(campus);
+        List<Job> j = jobsService.get_jobs_from_campus(campus);
+        return j;
     }
 
     @RequestMapping("/company")

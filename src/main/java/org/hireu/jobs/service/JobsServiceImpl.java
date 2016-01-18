@@ -18,7 +18,7 @@ public class JobsServiceImpl implements JobsService{
 
     @Override
     public List<Job> get_jobs_from_campus(String campus) {
-        return null;
+        return jobsDao.get_jobs_from_campus(campus);
     }
 
     @Override
