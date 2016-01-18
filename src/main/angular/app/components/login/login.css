@@ -1,0 +1,24 @@
+.login-form {
+  padding : 2rem;
+  background-color: #FAFAFA;
+  border-radius : .5rem;
+}
+
+.login {
+  display : flex;
+  justify-content : center;
+  padding : 1rem;
+}
+
+.login-email, .login-password, .login-confirm-password {
+  padding : .5rem;
+  display : flex;
+}
+
+.login-email-text, .login-password-text, .login-confirm-password-text {
+  flex : 1;
+}
+
+.login-submit {
+  padding : 1rem;
+}

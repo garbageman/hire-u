@@ -1,0 +1,18 @@
+<div class = "login">
+  <div class = "login-form">
+    <div class = "login-email">
+      <input class ="login-email-text" placeholder="Email Address">
+    </div>
+    <div class = "login-password">
+      <input type = "password" class = "login-password-text" placeholder="Password">
+    </div>
+    <div class = "login-confirm-password" ng-if="signup">
+      <input type = "password" class = "login-confirm-password-text" placeholder="Confirm Passoword">
+    </div>
+    <div class = "login-submit">
+      <button class = "login-button btn btn-success"> {{ message }} </button>
+      <button class = "signup-button btn btn-small" ng-if="!signup" ng-click="toggleSignup()"> Need an account? </button>
+      <button class = "login-button btn btn-small" ng-if="signup" ng-click="toggleSignup()"> Have an account? </button>
+    </div>
+  </div>
+</div>
