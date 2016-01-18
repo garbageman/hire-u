@@ -38,7 +38,7 @@ public class Job {
         return description;
     }
 
-    public boolean is_hiring() {
+    public boolean getIs_hiring() {
         return is_hiring;
     }
 
