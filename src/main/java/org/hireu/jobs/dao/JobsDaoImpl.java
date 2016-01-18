@@ -1,5 +1,6 @@
 package org.hireu.jobs.dao;
 
+
 import org.hireu.jobs.model.Job;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
@@ -7,13 +8,14 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
-import java.util.List;
 import java.util.Collections;
+import java.util.List;
 import java.util.Map;
 
 /**
  * Created by bacherj on 1/10/16.
  */
+
 @Repository
 public class JobsDaoImpl implements JobsDao{
 
@@ -24,7 +26,9 @@ public class JobsDaoImpl implements JobsDao{
     public List<Job> get_jobs_from_campus(String campus) {
         String sql = "select * from jobs where url = :campus_url";
 
-        return null;
+        Map<String, String> nameParameters = Collections.singletonMap("campus_url",campus);
+
+        return namedParameterJdbcTemplate.query(sql, nameParameters, JobsDaoImpl.jobMapper());
     }
 
     @Override
@@ -32,7 +36,8 @@ public class JobsDaoImpl implements JobsDao{
         String sql = "select * from jobs where dept_name = :dept_name";
 
         Map<String, String> namedParameters = Collections.singletonMap("dept_name",company);
-        return null;
+
+        return namedParameterJdbcTemplate.query(sql, namedParameters, JobsDaoImpl.jobMapper());
     }
 
     @Override
@@ -47,7 +52,7 @@ public class JobsDaoImpl implements JobsDao{
         return null;
     }
 
-    private static RowMapper<Job> campusMapper() {
+    private static RowMapper<Job> jobMapper() {
 
         return new RowMapper<Job>() {
             public Job mapRow(ResultSet rs, int rowNum) {

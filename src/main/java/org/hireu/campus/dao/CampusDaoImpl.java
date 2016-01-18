@@ -48,7 +48,6 @@ public class CampusDaoImpl implements CampusDao {
 
     Map<String, String> namedParameters = Collections.singletonMap("campus_url", url);
 
-
     return namedParameterJdbcTemplate.queryForObject(sql, namedParameters, CampusDaoImpl.jobCountMapper());
   }
 
@@ -61,6 +60,7 @@ public class CampusDaoImpl implements CampusDao {
 
   /* This method returns an anonymous rowMapper that maps a resultset row*/
   /* to a jobcount model instance */
+
   private static RowMapper<JobCount> jobCountMapper() {
 
     return new RowMapper<JobCount>() {
