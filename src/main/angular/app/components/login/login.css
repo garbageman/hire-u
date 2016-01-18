@@ -1,6 +1,7 @@
 .login-form {
   padding : 2rem;
   background-color: #FAFAFA;
+  border-radius : .5rem;
 }
 
 .login {
