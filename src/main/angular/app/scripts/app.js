@@ -67,6 +67,7 @@ angular
             return $ocLazyLoad.load({
               files: [
                 'components/departmentsearch/DepartmentSearchController.js',
+                'components/departmentsearch/departmentsearch.css',
                 'components/select2/select.css',
                 'components/search/search.js',
                 'components/select2/select.js'

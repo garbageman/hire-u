@@ -36,7 +36,8 @@
 .navigation-login-button {
   color : white!important;
 }
-.navigation-home, a:visited {
+
+.navigation-home, .navigation-link, a:visited {
   color : black;
 }
 

@@ -1,4 +1,50 @@
 <div class="department-search">
-  <p> Selected : {{selection}} </p>
-  <search ng-model="selection" type="controllertype" list="testlist"></search>
+  <div class = "department-search-subcontainer">
+    <div class = "department-search-department-select">
+      Department:
+      <search ng-model="selection" type="controllertype" list="testlist" ng-change="check(selection)"></search>
+    </div>
+  </div>
+  <div class = "department-search-subcontainer">
+    Information about the selected department {{ selection }}
+  </div>
+  <div class = "department-search-subcontainer">
+    <div class = "department-search-postings-label">
+      Current postings
+    </div>
+    <div class = "department-search-postings">
+      <div class = "department-posting" ng-if="!currentpostings">
+        Looks like theres no postings! Check back later!
+      </div>
+
+      <div class = "department-posting" ng-repeat="posting in currentpostings" ng-if="currentpostings">
+        <div class = "department-posting-title">
+          Title : {{ posting.title }}
+        </div>
+
+        <div class = "department-posting-time">
+          Time Commitment (Weekly) : {{ posting.time }}
+        </div>
+
+        <div class = "department-posting-qual">
+          <div class = "department-posting-qual-label">
+            Qualifications :
+          </div>
+          <div class = "department-posting-qual-value">
+            {{ posting.qualifications }}
+          </div>
+        </div>
+
+        <div class = "department-posting-duties">
+          <div class = "department-posting-duties-label">
+            Duties :
+          </div>
+          <div class = "department-posting-duties-value">
+            {{ posting.duties }}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
 </div>
