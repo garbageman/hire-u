@@ -2,6 +2,7 @@ package org.hireu.campus.dao;
 
 import org.hireu.campus.model.Campus;
 import org.hireu.campus.model.JobCount;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
@@ -44,19 +45,23 @@ public class CampusDaoImpl implements CampusDao {
 
   /* This is another service that gets the total number of jobs of the campus */
   public JobCount getJobCount(String url) {
+
     String sql = "select count(*) as count from jobs where url = :campus_url and is_hiring = true";
 
     Map<String, String> namedParameters = Collections.singletonMap("campus_url", url);
 
-
     return namedParameterJdbcTemplate.queryForObject(sql, namedParameters, CampusDaoImpl.jobCountMapper());
+
   }
 
   public List<Campus> getAllCampus() {
+
     String sql= "select * from campus";
 
     Map<String, String> nameParameter = Collections.singletonMap("","");
+
     return namedParameterJdbcTemplate.query(sql, nameParameter, CampusDaoImpl.campusMapper());
+
   }
 
   /* This method returns an anonymous rowMapper that maps a resultset row*/
@@ -79,7 +84,7 @@ public class CampusDaoImpl implements CampusDao {
 
   /* This method returns an anonymous rowMapper that maps a resultset row*/
   /* to a campus model instance */
-  private static RowMapper<Campus> campusMapper() {
+  public static RowMapper<Campus> campusMapper() {
 
     return new RowMapper<Campus>() {
       public Campus mapRow(ResultSet rs, int rowNum) {
