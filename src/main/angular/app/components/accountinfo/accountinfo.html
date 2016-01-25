@@ -1,31 +1,31 @@
 <div class = "accountinfo">
   <div class = "accountinfo-form">
-    <div class = "accountinfo-firstname">
+    <div class = "accountinfo-subcontainer">
       <p> First Name: </p>
-      <input class ="accountinfo-firstname-text" value = "{{firstName}}">
+      <input class ="accountinfo-firstname-text" placeholder="First Name" value = "{{firstName}}">
     </div>
-    <div class = "accountinfo-lastname">
+    <div class = "accountinfo-subcontainer">
       <p> Last Name: </p>
-      <input class ="accountinfo-lastname-text" value = "{{lastName}}">
+      <input class ="accountinfo-lastname-text" placeholder="Last Name" value = "{{lastName}}">
     </div>
-    <div class = "accountinfo-email">
+    <div class = "accountinfo-subcontainer">
       <p> Email: </p>
-      <input class ="accountinfo-email-text" value = "{{email}}">
+      <input class ="accountinfo-email-text" placeholder="Email" value = "{{email}}">
     </div>
-    <div class = "accountinfo-year">
+    <div class = "accountinfo-subcontainer">
       <p> Year: </p>
       <search ng-model="year" type="yeartype" list="yearlist"></search>
     </div>
-    <div class = "accountinfo-major">
+    <div class = "accountinfo-subcontainer">
       <p> Major: </p>
       <search ng-model="major" type="majortype" list="majorlist"></search>
     </div>
-    <div class = "accountinfo-campus">
+    <div class = "accountinfo-subcontainer">
       <p> Institution: </p>
       <search ng-model="institution" type="institutiontype" list="campuslist"></search>
     </div>
-    <div class = "accountinfo-confirmation">
-      <a class = "accountinfo-confirmation btn btn-primary btn-success"> Update Info </a>
+    <div class = "accountinfo-subcontainer">
+      <a class = "accountinfo-confirmation-button btn btn-primary btn-success"> Update Info </a>
     </div>
   </div>
 </div>

@@ -10,7 +10,7 @@
       <input type = "password" class = "login-confirm-password-text" placeholder="Confirm Password">
     </div>
     <div class = "login-submit">
-      <button class = "login-button btn btn-success"> {{ message }} </button>
+      <button class = "login-button btn btn-success" ng-click=login()> {{ message }} </button>
       <button class = "signup-button btn btn-small" ng-if="!signup" ng-click="toggleSignup()"> Need an account? </button>
       <button class = "login-button btn btn-small" ng-if="signup" ng-click="toggleSignup()"> Have an account? </button>
     </div>

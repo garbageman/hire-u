@@ -108,6 +108,24 @@ angular
           }
         }
       })
+      .state('departmentForm', {
+        url: '/departmentform',
+        templateUrl: 'components/departmentForm/departmentForm.html',
+        controller: 'DepartmentFormCtrl',
+        resolve: {
+          loadMyFiles: function($ocLazyLoad) {
+            return $ocLazyLoad.load({
+              files: [
+                'components/departmentForm/departmentFormController.js',
+                'components/departmentForm/departmentform.css',
+                'components/select2/select.css',
+                'components/search/search.js',
+                'components/select2/select.js'
+              ]
+            });
+          }
+        }
+      })
       .state('job-description', {
         url : '/j/job',
         templateUrl : 'components/job/job.html',

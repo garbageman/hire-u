@@ -1,0 +1,23 @@
+.departmentForm-form {
+  padding : 2rem;
+  background-color: #FAFAFA;
+  border-radius : .5rem;
+}
+
+.departmentForm-contact-text, .departmentForm-name-text, .departmentForm-email-text {
+  width : 100%;
+}
+
+.departmentForm-subcontainer {
+  padding-bottom : 1rem;
+}
+
+.departmentForm {
+  display : flex;
+  justify-content : center;
+  padding : 1rem;
+}
+
+.departmentForm-confirmation {
+  padding-top : 1rem;
+}

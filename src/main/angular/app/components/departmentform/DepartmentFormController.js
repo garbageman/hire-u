@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hireUApp').controller('AccountInfoCtrl', function($scope) {
+angular.module('hireUApp').controller('DepartmentFormCtrl', function($scope) {
   $scope.email = 'dnagle@umd.edu';
   //$scope.firstName = 'Damien';
   $scope.lastName = 'Nagle';
@@ -14,23 +14,5 @@ angular.module('hireUApp').controller('AccountInfoCtrl', function($scope) {
     'Georgetown University'
   ];
 
-  $scope.yearlist = [
-    'Freshman',
-    'Sophomore',
-    'Junior',
-    'Senior'
-  ];
-
-  $scope.majorlist = [
-    'Computer Science',
-    'Art',
-    'Chemistry',
-    'Biology',
-    'Business',
-    'Basket Weaving'
-  ];
-
   $scope.institutiontype = 'institution';
-  $scope.majortype = 'major';
-  $scope.yeartype = 'year'
 });

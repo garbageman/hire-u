@@ -1,0 +1,29 @@
+<div class = "departmentForm">
+  <div class = "departmentForm-form">
+
+    <div class = "departmentForm-subcontainer">
+      <p> Institution: </p>
+      <search ng-model="institution" type="institutiontype" list="campuslist"></search>
+    </div>
+
+    <div class = "departmentForm-subcontainer">
+      <p> Department Name: </p>
+      <input class ="departmentForm-name-text" placeholder="Department Name" value = "{{departmentName}}">
+    </div>
+
+    <div class = "departmentForm-subcontainer">
+      <p> Account Email: </p>
+      <input class ="departmentForm-email-text" placeholder="Account Email" value = "{{email}}">
+    </div>
+
+    <div class = "departmentForm-subcontainer">
+      <p> Contact Email (if different from email for account) : </p>
+      <input class ="departmentForm-contact-text" placeholder="Contact Email" value = "{{contactEmail}}">
+    </div>
+
+    <div class = "departmentForm-subcontainer">
+      <a class = "departmentForm-confirmation-button btn btn-primary btn-success"> Update Info </a>
+    </div>
+
+  </div>
+</div>

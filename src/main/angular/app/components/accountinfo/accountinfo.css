@@ -1,0 +1,19 @@
+.accountinfo-form {
+  padding : 2rem;
+  background-color: #FAFAFA;
+  border-radius : .5rem;
+}
+
+.accountinfo-firstname-text, .accountinfo-lastname-text, .accountinfo-email-text {
+  width : 100%;
+}
+
+.accountinfo-subcontainer {
+  padding-bottom : 1rem;
+}
+
+.accountinfo {
+  display : flex;
+  justify-content : center;
+  padding : 1rem;
+}

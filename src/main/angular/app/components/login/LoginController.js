@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('hireUApp').controller('LoginCtrl', function($scope) {
+angular.module('hireUApp').controller('LoginCtrl', function($scope, $cookies) {
   $scope.signup = false;
   $scope.message = 'Login';
 
@@ -14,5 +14,15 @@ angular.module('hireUApp').controller('LoginCtrl', function($scope) {
     }
   };
 
-  
+  $scope.login = function() {
+    if ($scope.signup) {
+      /* Sign up code goes here */
+    } else {
+      /* Login code goes here */
+      $cookies.put('loggedin', true);
+    }
+  }
+
+
+
 });
