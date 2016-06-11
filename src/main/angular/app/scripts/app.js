@@ -34,8 +34,7 @@ angular
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({
               files: [
-                'components/main/main.js',
-                'styles/main.css'
+                'components/main/main.js'
               ]
             });
           }
@@ -50,7 +49,6 @@ angular
             return $ocLazyLoad.load({
               files: [
                 'components/school/schoolController.js',
-                'styles/school-home.css',
                 'components/school/schoolService.js',
                 'config/config.js'
               ]
@@ -67,8 +65,6 @@ angular
             return $ocLazyLoad.load({
               files: [
                 'components/departmentsearch/DepartmentSearchController.js',
-                'components/departmentsearch/departmentsearch.css',
-                'components/select2/select.css',
                 'components/search/search.js',
                 'components/select2/select.js'
               ]
@@ -85,7 +81,6 @@ angular
             return $ocLazyLoad.load({
               files: [
                 'components/login/LoginController.js',
-                'components/login/login.css'
               ]
             });
           }
@@ -100,8 +95,6 @@ angular
             return $ocLazyLoad.load({
               files: [
                 'components/accountinfo/AccountInfoController.js',
-                'components/accountinfo/accountinfo.css',
-                'components/select2/select.css',
                 'components/search/search.js',
                 'components/select2/select.js'
               ]
@@ -118,8 +111,6 @@ angular
             return $ocLazyLoad.load({
               files: [
                 'components/departmentForm/departmentFormController.js',
-                'components/departmentForm/departmentform.css',
-                'components/select2/select.css',
                 'components/search/search.js',
                 'components/select2/select.js'
               ]
@@ -134,7 +125,6 @@ angular
           loadMyFiles: function($ocLazyLoad) {
             return $ocLazyLoad.load({
               files: [
-                'styles/job.css'
               ]
             });
           }

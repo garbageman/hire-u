@@ -25,11 +25,32 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  // load tasks for grunt-war
+  grunt.loadNpmTasks('grunt-war');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
     // Project settings
     yeoman: appConfig,
+
+    // build a war from the dist/ directory
+    war: {
+      target: {
+        options: {
+          war_dist_folder: '<%= yeoman.dist %>',    /* Folder where to generate the WAR. */
+          war_name: 'hire-u'                    /* The name fo the WAR file (.war will be the extension) */
+        },
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.dist %>',
+            src: ['**'],
+            dest: ''
+          }
+        ]
+      }
+    },
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -262,7 +283,7 @@ module.exports = function (grunt) {
         assetsDirs: [
           '<%= yeoman.dist %>',
           '<%= yeoman.dist %>/images',
-          '<%= yeoman.dist %>/styles'
+          '<%= yeoman.dist %>/styles',
         ],
         patterns: {
           js: [[/(images\/[^''""]*\.(png|jpg|jpeg|gif|webp|svg))/g, 'Replacing references to images']]
@@ -274,15 +295,13 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/main.css' : ['.tmp/styles/*.css']
+        }
+      }
+    },
     // uglify: {
     //   dist: {
     //     files: {
@@ -392,6 +411,34 @@ module.exports = function (grunt) {
           cwd: 'bower_components/bootstrap/dist',
           src: 'fonts/*',
           dest: '<%= yeoman.dist %>'
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/components',
+          dest: '<%= yeoman.dist %>/components',
+          src: [
+            '**/*.js',
+            '**/*.html'
+          ]
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/config',
+          dest: '<%= yeoman.dist %>/config',
+          src: '**/*'
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/components',
+          dest: '.tmp/styles',
+          src: [
+            '{,*/}*.css'
+          ],
+          flatten: true
+        }, {
+          expand: true,
+          cwd: '<%= yeoman.app %>/styles',
+          dest: '.tmp/styles',
+          src: [
+            '{,*/}*.css'
+          ]
         }]
       },
       styles: {
@@ -466,12 +513,12 @@ module.exports = function (grunt) {
     'concat',
     'ngAnnotate',
     'copy:dist',
-    'cdnify',
+    // 'cdnify',
     'cssmin',
     'uglify',
-    'filerev',
+    // 'filerev',
     'usemin',
-    'htmlmin'
+    // 'htmlmin'
   ]);
 
   grunt.registerTask('default', [
@@ -479,5 +526,10 @@ module.exports = function (grunt) {
     'newer:jscs',
     'test',
     'build'
+  ]);
+
+  grunt.registerTask('deploy', [
+    'build',
+    'war'
   ]);
 };
