@@ -27,4 +27,6 @@ angular.module('hireUApp')
 		}
 	];
 	
+	
+	
 }]);

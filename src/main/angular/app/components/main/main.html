@@ -1,39 +1,56 @@
-<div class="main-app">
-  <div class="row">
-    <div class="left-column col-md-8">
-      <div class="row">
-        <div id="search-container" class="col-md-12 dev column-element">
-          <h5>What are you looking for?</h5>
-          <input id="search-field" role="searchbar" placeholder="search for jobs here ... ">
-          <button role="button">Search</button>
-        </div>
+<div class="splash-area">
+  <div class="main-app">
+    <!-- <div class="container"> -->
+      <div class="jumbotron">
+          <h1 style="font-family: 'Montserrat'; font-weight: 600">hire.u</h1>
+        <div class="splash-box">
+          <!-- <h3>Find your school!</h3> -->
+          <div class="splash-box-elements">
+              <label>Find your school</label><br>
+              <input type="text" placeholder="University of Maryland, College Park">
+              <button type="submit" class="btn glyphicon glyphicon-search"></button>
+          </div>
       </div>
+      <h5>Already have an account? <a href="#">Login</a></h5>
+    </div>
 
-      <div class="row">
-        <div id="nav-container" class="col-md-12 dev column-element">
-          <ul id="nav-list">
-            <li><a role="button" href="#/">Search</a></li>
-            <li><a role="button" href="#/">Compare</a></li>
-            <li><a role="button" href="#/">Profile</a></li>
-            <li><a role="button" ui-sref="school-home">School Home (Click me)</a></li>
-          </ul>
+    <!-- <div class="row">
+      <div class="left-column col-md-8">
+        <div class="row">
+          <div id="search-container" class="col-md-12 dev column-element">
+            <h5>What are you looking for?</h5>
+            <input id="search-field" role="searchbar" placeholder="search for jobs here ... ">
+            <button role="button">Search</button>
+          </div>
         </div>
-      </div>
 
-      <div class="row">
-        <div id="job-listings" class="col-md-12 column-element dev">
-          <div class="job" ng-repeat="job in jobs">
-            <h4 class="job-title" ng-bind="job.title"></h4>
-            <p class="job-description" ng-bind="job.text"></p>
-            <img class="job-image" ng-src="{{job.image}}"></img>
-            <hr>
+        <div class="row">
+          <div id="nav-container" class="col-md-12 dev column-element">
+            <ul id="nav-list">
+              <li><a role="button" href="#/">Search</a></li>
+              <li><a role="button" href="#/">Compare</a></li>
+              <li><a role="button" href="#/">Profile</a></li>
+              <li><a role="button" ui-sref="school-home">School Home (Click me)</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div id="job-listings" class="col-md-12 column-element dev">
+            <div class="job" ng-repeat="job in jobs">
+              <h4 class="job-title" ng-bind="job.title"></h4>
+              <p class="job-description" ng-bind="job.text"></p>
+              <img class="job-image" ng-src="{{job.image}}"></img>
+              <hr>
+            </div>
           </div>
         </div>
       </div>
-    </div>
 
-    <div class="right-column col-md-4">
+      <div class="right-column col-md-4">
 
-    </div>
+      </div>
+    </div> -->
+
   </div>
 </div>
